@@ -7,21 +7,51 @@ import link from "next/link";
 
 function Hamburger({ white }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [showInnner, setShowInnner] = useState(false);
   const ref = useRef(null);
   const [state, setState] = useState();
   const menuItems = [
     {
-      text: "Payments",
-      link: "/payments",
+      text: "Home",
+      link: "/",
     },
     {
-      text: "Savings",
-      link: "/savings",
+      text: "Company",
+      link: "/team",
     },
     {
-      text: "Loan",
+      text: "Products",
       link: "/loan",
+      noclick: true,
+      inner: [
+        {
+          text: "Payments",
+          link: "/payments",
+        },
+        {
+          text: "Savings",
+          link: "/savings",
+        },
+        {
+          text: "Loan",
+          link: "/loan",
+        },
+        {
+          text: "Get paid",
+          link: "/get-paid",
+        },
+      ],
     },
+    {
+      text: "Personal Banking",
+      link: "/personal-banking",
+    },
+    {
+      text: "Disbursements",
+      link: "/disbursements",
+    },
+  ];
+  const menuItems2 = [
     {
       text: "Personal Banking",
       link: "/personal-banking",
@@ -64,7 +94,7 @@ function Hamburger({ white }) {
           onMouseLeave={() => setState("closed")}
           onClose={() => setState("closed")}
         >
-          {menuItems.map((itm, i) => (
+          {menuItems2.map((itm, i) => (
             <MenuItem key={i}>
               <Link href={itm.link}>
                 <div className="p-2 w-40">{itm.text}</div>
@@ -79,13 +109,37 @@ function Hamburger({ white }) {
 
       {isOpen && (
         <div className="menu-contents md:block 2xl:hidden text-center">
-          {menuItems.map((itm, i) => (
-            <Link href={itm.link} key={i}>
-              <p className=" py-6" onClick={() => setIsOpen(false)}>
-                {itm.text}
-              </p>
-            </Link>
-          ))}
+          {menuItems.map((itm, i) =>
+            itm.noclick ? (
+              <>
+                <p
+                  className="pri medium py-6"
+                  onClick={() => setShowInnner(!showInnner)}
+                >
+                  <div className="flex justify-center">
+                    {itm.text} <img src="/assets/pri-caret.svg" alt="" />
+                  </div>
+                </p>
+                {showInnner && (
+                  <div className="inner-wrap">
+                    {itm.inner.map((itm, j) => (
+                      <Link href={itm.link} key={j}>
+                        <p className="py-6" onClick={() => setIsOpen(false)}>
+                          {itm.text}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link href={itm.link} key={i}>
+                <p className="medium py-6" onClick={() => setIsOpen(false)}>
+                  {itm.text}
+                </p>
+              </Link>
+            )
+          )}
           <Link href="/join">
             <button className="main-btn mt-4">We are hiring</button>
           </Link>

@@ -9,12 +9,12 @@ function payments(props) {
       <header className="light-gradient mb-24 h-85_ md:h-auto overflow-hidden">
         <Navbar />
         <div className="container py-16 pt-36 px-40 lg:px-6 lg:px-6 md:pb-0  mx-auto flex flex-wrap justify-between relative">
-          <div className="w-1/2 md:w-full flex flex-col justify-center mt-20 md:mt-10">
+          <div className="w-1/2 md:w-full flex flex-col justify-center mt-20 md:mt-10 md:text-center">
             <h1 className="medium md:text-5xl md:text-4xl">
               Let&apos;s Grow
               <span className="block">Together</span>
             </h1>
-            <p className="c3 mt-4 w-7/12">
+            <p className="c3 mt-4 w-7/12 md:w-10/12 md:mx-auto">
               Quick business and personal loans to grow your business and
               achieve your goals. Be the first to know when we launch
             </p>

@@ -106,7 +106,7 @@ function team(props) {
           <div className="w-1/2 md:w-full relative">
             <img
               src="/assets/guy.png"
-              className="w-10/12 h-auto absolute -top-14 md:top-0 md:relative md:w-full"
+              className="w-10/12 h-auto absolute -top-14 md:top-0 md:relative md:w-full home-banner"
               alt=""
             />
           </div>

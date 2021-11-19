@@ -261,6 +261,9 @@ p {
 .blue {
   color: #00c3ff;
 }
+.pri {
+  color: #581689;
+}
 .light-gradient {
   background: linear-gradient(
     106.29deg,
@@ -341,8 +344,34 @@ p {
   .has-line::after {
     display: none;
   }
+  .banner-bg {
+    overflow-x: hidden;
+  }
+  .home-banner {
+    animation: none;
+    position: relative;
+    width: 140% !important;
+    max-width: unset;
+    margin: 0 0 0 -20%;
+  }
+  .pull-me-up {
+    margin-top: -180px;
+  }
+  .pull-me-up2 {
+    margin-top: -140px;
+  }
+  .pull-left {
+    margin-left: -60px !important;
+  }
+  .inner-wrap {
+    background: aliceblue;
+    border-radius: 5px;
+  }
 }
-
+.logo {
+  position: relative;
+  z-index: 1000;
+}
 /* hamburger */
 .hamburger {
   width: 30px;

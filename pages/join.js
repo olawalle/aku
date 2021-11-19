@@ -73,7 +73,7 @@ function join(props) {
           <div className="w-1/2 relative md:w-full">
             <img
               src="/assets/girl.png"
-              className="w-11/12 h-auto absolute -top-16 md:relative md:top-0"
+              className="w-11/12 h-auto home-banner absolute -top-16 md:relative md:top-0"
               alt=""
             />
           </div>

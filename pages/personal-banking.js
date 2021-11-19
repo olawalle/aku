@@ -2,6 +2,7 @@ import React from "react";
 import { Partnering } from ".";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/navbar";
+import Link from "next/link";
 
 function team(props) {
   return (
@@ -26,7 +27,7 @@ function team(props) {
           </div>
           <img
             src="/assets/couple2.png"
-            className="absolute right-8 personalbanner mt-0 w-1/2 md:relative md:w-full md:right-0 md:mt-12"
+            className="absolute right-8 home-banner mt-0 w-1/2 md:relative md:w-full md:right-0 md:mt-12"
             alt=""
           />
         </div>
@@ -38,23 +39,47 @@ function team(props) {
             Easy Payments,
             <span className="block">Simple Banking</span>
           </h2>
-          <p className="ft-20 c4 medium mb-2">Payments</p>
-          <p className="c2 ft-16 mb-10 w-3/4 md:w-11/12">
-            We give organisations, entrepreneurs and customers the ability to
-            make and receive secure, frictionless payments, whether you have a
-            POS, smartphone or feature phone.
-          </p>
-          <p className="ft-20 c4 medium mb-2">Savings</p>
-          <p className="c2 ft-16 mb-10 w-3/4 md:w-11/12">
-            We empower users to save as they earn. Every time you get paid,
-            automate a variable deduction towards a specific savings goal.
-          </p>
-          <p className="ft-20 c4 medium mb-2">Credit</p>
-          <p className="c2 ft-16 mb-10 w-3/4 md:w-11/12">
-            We give organisations, entrepreneurs and customers the ability to
-            make and receive secure, frictionless payments, whether you have a
-            POS, smartphone or feature phone.
-          </p>
+          <Link href="/payments">
+            <div className="pointer c2 ft-16 mb-10 w-3/4 md:w-11/12 flex items-start">
+              <img src="/assets/bank1.svg" alt="" />
+              <div className="block pl-5">
+                <p className="ft-20 c4 medium mb-2">Payments</p>
+                We give organisations, entrepreneurs and customers the ability
+                to make and receive secure, frictionless payments, whether you
+                have a POS, smartphone or feature phone.
+              </div>
+            </div>
+          </Link>
+          <Link href="/savings">
+            <div className="pointer c2 ft-16 mb-10 w-3/4 md:w-11/12 flex items-start">
+              <img src="/assets/bank2.svg" alt="" />
+              <div className="block pl-5">
+                <p className="ft-20 c4 medium mb-2">Savings</p>
+                We empower users to save as they earn. Every time you get paid,
+                automate a variable deduction towards a specific savings goal.
+              </div>
+            </div>
+          </Link>
+          <Link href="/loan">
+            <div className="pointer c2 ft-16 mb-10 w-3/4 md:w-11/12 flex items-start">
+              <img src="/assets/bank3.svg" alt="" />
+              <div className="block pl-5">
+                <p className="ft-20 c4 medium mb-2">Credit</p>
+                We give organisations, entrepreneurs and customers the ability
+                to make and receive secure, frictionless payments, whether you
+                have a POS, smartphone or feature phone.
+              </div>
+            </div>
+          </Link>
+          <Link href="/get-paid">
+            <div className="pointer c2 ft-16 mb-10 w-3/4 md:w-11/12 flex items-start">
+              <img src="/assets/bank4.svg" alt="" />
+              <div className="block pl-5">
+                <p className="ft-20 c4 medium mb-2">Get Paid and Grow</p>
+                Secure, frictionless payments. No app-download required.
+              </div>
+            </div>
+          </Link>
         </div>
         <div className="w-1/2 md:w-full pb-32">
           <img src="/assets/phone.png" className="float-right" alt="" />
@@ -62,7 +87,7 @@ function team(props) {
         <div className="w-1/2 md:w-full mb-10">
           <img
             src="/assets/guy2.png"
-            className="float-right w-80_ mr-20"
+            className="float-right w-10/12 mr-20"
             alt=""
           />
         </div>

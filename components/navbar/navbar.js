@@ -23,13 +23,13 @@ function Navbar({ white }) {
           <img
             src="/assets/logo-white.png"
             alt=""
-            className="h-12 md:h-10 cursor-pointer"
+            className="h-12 md:h-10 cursor-pointer logo"
           />
         ) : (
           <img
             src="/assets/logo-min.png"
             alt=""
-            className="h-12 md:h-10 cursor-pointer"
+            className="h-12 md:h-10 cursor-pointer logo"
           />
         )}
       </Link>

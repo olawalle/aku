@@ -27,12 +27,12 @@ export default function Home() {
           <div className="w-2/3 md:w-full">
             <img
               src="/assets/sm1.png"
-              className="absolute left-96 ml-48 up-to-down -bottom-32 w-96 z-20 lg:hidden"
+              className="absolute left-96 ml-48 up-to-down -bottom-32 w-96 z-20 lg:w-60 md:relative md:left-0 pull-left md:ml-0"
               alt=""
             />
             <img
               src="/assets/computer-min.png"
-              className="absolute right-0 disbanner w-8/12 md:w-full md:relative top-40 z-10 lg:relative lg:bottom-0 -lg:right-20 lg:bottom-0 -lg:right-20"
+              className="absolute right-0 home-banner pull-me-up w-8/12 md:w-full md:relative md:top-0 top-40 z-10 lg:relative -lg:right-20"
               alt=""
             />
           </div>

@@ -14,7 +14,6 @@ const partners = [
   "/assets/tr6.png",
 ];
 let arr = new Array(10).fill([...partners]).flat();
-console.log(arr);
 
 export const Partnering = () => (
   <div className="w-full shadow-2 px-12 py-20 md:px-5 md:py-5 rounded-3xl mt-12 bg-map">
@@ -111,7 +110,7 @@ export default function Home() {
           <div className="w-1/2 md:w-full md:mt-10">
             <img
               src="/assets/vv-min.png"
-              className="w-full side-to-side-2 md:w-10/12 md:ml-10"
+              className="w-full side-to-side-2 home-banner"
               alt=""
             />
           </div>

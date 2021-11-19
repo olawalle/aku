@@ -27,7 +27,7 @@ function JobDesc(props) {
           </div>
           <img
             src="/assets/banner7.svg"
-            className="w-6/12 md:w-full md:mt-12"
+            className="w-6/12 md:w-full md:mt-12 home-banner"
             alt=""
           />
         </div>
