@@ -14,7 +14,7 @@ function Navbar({ white }) {
 
   return (
     <div
-      className={`nav container h-20 md:h-12 px-40 md:px-6 lg:px-6  mx-auto flex flex-wrap justify-between items-center  lg:px-6 lg:px-6 fixed top-0 right-0 ${
+      className={`nav container h-24 md:h-16 px-40 md:px-6 lg:px-6  mx-auto flex flex-wrap justify-between items-center  lg:px-6 lg:px-6 fixed top-0 right-0 ${
         !isTop ? "" : "off-top bg-white"
       }`}
     >

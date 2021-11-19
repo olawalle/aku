@@ -1,15 +1,20 @@
 import Image from "next/image";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/navbar";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const partners = [
-  "/assets/cbn.svg",
-  "/assets/lsetf.svg",
-  "/assets/boi.svg",
-  "/assets/lasra.svg",
-  "/assets/usdaf.svg",
-  "/assets/undp.svg",
+  "/assets/tr1.png",
+  "/assets/tr2.png",
+  "/assets/tr3.png",
+  "/assets/tr4.png",
+  "/assets/tr5.png",
+  "/assets/tr6.png",
 ];
+let arr = new Array(10).fill([...partners]).flat();
+console.log(arr);
 
 export const Partnering = () => (
   <div className="w-full shadow-2 px-12 py-20 md:px-5 md:py-5 rounded-3xl mt-12 bg-map">
@@ -28,15 +33,58 @@ export const Partnering = () => (
   </div>
 );
 
-export const Partners = () => (
-  <div className="md:flex md:flex-wrap container py-16 px-40 lg:px-6 lg:px-6  mx-auto flex flex-wrap justify-between items-baseline">
-    {partners.map((link, i) => (
-      <div key={i} className="md:w-1/3 md:w-5/12 lg:w-2/12 md:mb-7">
-        <img key={i} src={link} alt="" className="md:h-10" />
-      </div>
-    ))}
-  </div>
-);
+export const Partners = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    nextArrow: <></>,
+    prevArrow: <></>,
+  };
+  return (
+    <div className="container py-16 px-40 lg:px-6 lg:px-6  mx-auto">
+      <Slider {...settings}>
+        {arr.map((link, i) => (
+          <div key={i} className="md:w-1/3 md:w-5/12 lg:w-2/12 md:mb-7 mr-1">
+            <img key={i} src={link} alt="" className="h-12 md:h-10" />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
