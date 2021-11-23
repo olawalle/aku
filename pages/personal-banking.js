@@ -87,7 +87,7 @@ function team(props) {
         <div className="w-1/2 md:w-full mb-10">
           <img
             src="/assets/guy2.png"
-            className="float-right w-10/12 mr-20"
+            className="float-right w-10/12 mr-20 md:hidden"
             alt=""
           />
         </div>

@@ -81,7 +81,7 @@ function join(props) {
       </header>
 
       <section className=" white-bg container py-16 px-40 lg:px-6  lg:px-6  md:pb-0  mx-auto flex flex-wrap relative">
-        <h2 className="c4">Open positions</h2>
+        <h2 className="c4 md:text-3xl md:mb-5">Open positions</h2>
 
         {jobs.map((job, i) => (
           <Link href="/job-description" key={i}>

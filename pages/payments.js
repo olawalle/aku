@@ -1,15 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/navbar";
+import emailjs from "emailjs-com";
 
-export const BtnInput = () => (
-  <div className="relative flex inp-wrap md:w-full">
-    <input type="text" className="email-input" placeholder="Enter your email" />
-    <button className="round-btn right-4">
-      <img src="/assets/right-arrow.svg" alt="" />
-    </button>
-  </div>
-);
+export const BtnInput = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = () => {
+    setLoading(true);
+    let templateParams = {
+      from_name: email,
+      to_name: "achugo2017@gmail.com",
+      subject: "NEW CONTACT EMAIL",
+      message: `New contact email is ${email}`,
+    };
+    emailjs
+      .send(
+        "service_bfkjgzm",
+        "template_h9qskio",
+        templateParams,
+        "user_6kzuCPtmURYzBjgaoN4US"
+      )
+      .then((res) => {
+        console.log("this is our response " + res);
+      })
+      .finally(() => {
+        setEmail("");
+        setLoading(false);
+      });
+  };
+
+  return (
+    <>
+      {loading ? (
+        <p style={{ marginTop: 40 }}>Submitting email...</p>
+      ) : (
+        <div className="relative flex inp-wrap md:w-full">
+          <input
+            type="text"
+            className="email-input"
+            placeholder="Enter your email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button className="round-btn right-4" onClick={handleSubmit}>
+            <img src="/assets/right-arrow.svg" alt="" />
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
 
 function payments(props) {
   return (

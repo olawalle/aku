@@ -350,7 +350,7 @@ p {
   .home-banner {
     animation: none;
     position: relative;
-    width: 140% !important;
+    width: 155% !important;
     max-width: unset;
     margin: 0 0 0 -20%;
   }

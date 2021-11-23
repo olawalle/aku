@@ -88,9 +88,9 @@ export const Partners = () => {
 export default function Home() {
   return (
     <div className="w-full light-bg">
-      <header className="banner-bg">
+      <header className="">
         <Navbar />
-        <div className="container pt-36 px-40 lg:px-6 lg:px-6  mx-auto flex flex-wrap justify-between">
+        <div className="container pt-36 px-40 lg:px-6 lg:px-6 md:overflow-x-hidden  mx-auto flex flex-wrap justify-between">
           <div className="w-1/2 md:w-full flex flex-col justify-center -mt-12 md:mt-10">
             <h1 className="md:text-5xl md:text-4xl medium">
               Building Wealth{" "}
